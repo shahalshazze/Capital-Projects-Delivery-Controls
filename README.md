@@ -25,9 +25,38 @@ The proposed first profile is an owner-side industrial capital programme. The se
 
 | Check | Result |
 |---|---|
-| SDK 10.0.404 Release build | Passed with zero warnings and errors |
-| Publish and boot of published artefact | Passed |
-| HTTP smoke against published host | Passed |
-| JavaScript syntax | Passed |
-| Browser visual/accessibility review | Pending |
-| Container runtime review | Pending when a container engine is available |
+| .NET SDK 10.0.404 Release build | PASS |
+| Publish and boot of published artefact | PASS |
+| HTTP smoke against published host | PASS |
+| JavaScript syntax | PASS |
+| Browser visual status review | PASS |
+| Browser network failure handling | PASS |
+| Browser retry and recovery | PASS |
+| Docker image build | PASS |
+| Docker container runtime | PASS |
+| HTTP smoke against Docker container | PASS |
+| Separate accessibility validation | NOT_RUN |
+| External production deployment | NOT_RUN |
+
+### Validation details
+
+- Validation date: 26 November 2026.
+- Exact technically tested commit: `7af55f82ea832bb4fc8049d21e3011bb34a9eaec`.
+- Browser: Google Chrome 157.0.8103.79 (64-bit).
+- Recorded browser viewport: 458 × 730 CSS pixels.
+- Docker version: 29.9.3, using the WSL 2 backend.
+- P00/F01 — Build and published host: PASS.
+- P00/F02 — Visual status and retry: PASS.
+- P00/F03 — Local container runtime: PASS.
+
+### Validation limitations
+
+Separate accessibility validation was not performed and remains NOT_RUN. No accessibility compliance claim is made.
+
+Container validation was performed locally using Docker Desktop and WSL 2. No external production deployment was performed.
+
+### Review status
+
+P00 technical review is positive. Formal acceptance remains pending independent verification of the submitted evidence and Repomix by the maintainer.
+
+P01 preparation has been authorized by the maintainer.
